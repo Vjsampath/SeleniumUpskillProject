@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.UFM_001MyAccountRegistration">
+      <class name="com.training.sanity.tests.UNF_033CheckOutPlaceOrder">
         <methods>
+          <include name="uniformShoptest"/>
           <include name="setUpBeforeClass"/>
           <include name="setUp"/>
-          <include name="myAccounRegistration"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.UFM_001MyAccountRegistration -->
+      </class> <!-- com.training.sanity.tests.UNF_033CheckOutPlaceOrder -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

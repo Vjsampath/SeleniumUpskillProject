@@ -1,9 +1,7 @@
 package com.training.dataproviders;
 
 import java.util.List;
-
 import org.testng.annotations.DataProvider;
-
 import com.training.bean.LoginBean;
 import com.training.dao.ELearningDAO;
 import com.training.readexcel.ApachePOIExcelRead;
@@ -12,7 +10,7 @@ import com.training.readexcel.ReadExcel;
 public class LoginDataProviders {
 
 	@DataProvider(name = "db-inputs")
-	public Object [][] getDBData() {
+	public static Object [][] getDBData() {
 
 		List<LoginBean> list = new ELearningDAO().getLogins(); 
 		
@@ -31,14 +29,35 @@ public class LoginDataProviders {
 	}
 	
 	@DataProvider(name = "excel-inputs")
-	public Object[][] getExcelData(){
-		String fileName ="C:/Users/Naveen/Desktop/Testing.xlsx"; 
-		return new ApachePOIExcelRead().getExcelContent(fileName); 
+	public static Object[][] getExcelData(){
+		String fileName ="D:\\Software\\testdata.xlsx"; 
+		
+		List<List<Object>> retVal= ApachePOIExcelRead.getExcelContent(fileName);
+		System.out.println("size" + retVal.size());
+		
+		Object[][] result = new Object[retVal.size()][retVal.size()];
+		int count=0;
+		
+		for(List<Object> temp : retVal){
+			if(temp!=null){
+				Object[] obj = new Object[2];
+				System.out.println(temp.get(0));
+				System.out.println(temp.get(1));
+				
+				obj[0]= temp.get(0);
+				obj[1]= temp.get(1);
+				
+				result[count ++]= obj;
+			}
+		}
+		return result;
+		
+		
 	}
 	
 	@DataProvider(name = "xls-inputs")
-	public Object[][] getXLSData(){
+	public static Object[][] getXLSData(){
 		// ensure you will have the title as first line in the file 
-		return new ReadExcel().getExcelData("C:/Users/Naveen/Desktop/Testing.xls", "Sheet1"); 
+		return new ReadExcel().getExcelData("D:\\Software\\data.xls", "Sheet1"); 
 	}
 }

@@ -24,9 +24,11 @@ public class UniformHomePOM {
 	private WebElement register; 
 	
 	
+	@FindBy(xpath ="//div[@class='banner hb-animate-element right-to-left']//img[@class='img-responsive']")
+	private WebElement shopUniform; 
 	
-	
-	
+	@FindBy(xpath ="//div[@class='prod_detail_container']//a[contains(text(),'Regular T-Shirt (Maroon)')]")
+	private WebElement regTshirtsMaroon; 
 	
 	public void myAccountDropdownBtn() {
 		this.myAccountDropdown.click(); 
@@ -37,9 +39,19 @@ public class UniformHomePOM {
 	}
 	
 	public void clickmyAccountRegister() {
-		this.register.click();;
+		this.register.click();
 	}
 	
+	public void clickShopUniform() {
+		this.shopUniform.click();
+	}
 	
+	public void clickRegTshirtMaroon() {
+		this.regTshirtsMaroon.click();
+	}
 	
+	public WebElement regTshritsReturn()
+	{
+		return (this.regTshirtsMaroon);
+	}
 }

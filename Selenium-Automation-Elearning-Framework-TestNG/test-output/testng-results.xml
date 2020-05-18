@@ -1,78 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="31022" started-at="2020-05-12T04:04:31Z" finished-at="2020-05-12T04:05:02Z">
+  <suite name="Default suite" duration-ms="20443" started-at="2020-05-17T17:44:16Z" finished-at="2020-05-17T17:44:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="31022" started-at="2020-05-12T04:04:31Z" finished-at="2020-05-12T04:05:02Z">
-      <class name="com.training.sanity.tests.UFM_001MyAccountRegistration">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.UFM_001MyAccountRegistration@5419f379]" name="setUpBeforeClass" is-config="true" duration-ms="18" started-at="2020-05-12T09:34:31Z" finished-at="2020-05-12T09:34:31Z">
+    <test name="Default test" duration-ms="20443" started-at="2020-05-17T17:44:16Z" finished-at="2020-05-17T17:44:36Z">
+      <class name="com.training.sanity.tests.UNF_031ValidateLogin">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.UNF_031ValidateLogin@5419f379]" name="setUpBeforeClass" is-config="true" duration-ms="16" started-at="2020-05-17T23:14:16Z" finished-at="2020-05-17T23:14:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.UFM_001MyAccountRegistration@5419f379]" name="setUp" is-config="true" duration-ms="14169" started-at="2020-05-12T09:34:31Z" finished-at="2020-05-12T09:34:45Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.UNF_031ValidateLogin@5419f379]" name="setUp" is-config="true" duration-ms="15605" started-at="2020-05-17T23:14:16Z" finished-at="2020-05-17T23:14:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="myAccounRegistration()[pri:0, instance:com.training.sanity.tests.UFM_001MyAccountRegistration@5419f379]" name="myAccounRegistration" duration-ms="15068" started-at="2020-05-12T09:34:45Z" finished-at="2020-05-12T09:35:00Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@id='content']//p[contains(text(),'Congratulations! Your new account has been success')] (tried for 10 second(s) with 500 MILLISECONDS interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@id='content']//p[contains(text(),'Congratulations! Your new account has been success')] (tried for 10 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.training.sanity.tests.UFM_001MyAccountRegistration.myAccounRegistration(UFM_001MyAccountRegistration.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@id='content']//p[contains(text(),'Congratulations! Your new account has been success')]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'DESKTOP-2JAO2Q5', ip: '9.85.104.238', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:882)
-	at java.util.Optional.orElseThrow(Optional.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:881)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method status="PASS" signature="myAccounLoginValidate()[pri:0, instance:com.training.sanity.tests.UNF_031ValidateLogin@5419f379]" name="myAccounLoginValidate" duration-ms="2991" started-at="2020-05-17T23:14:31Z" finished-at="2020-05-17T23:14:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- myAccounRegistration -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.UFM_001MyAccountRegistration@5419f379]" name="tearDown" is-config="true" duration-ms="1740" started-at="2020-05-12T09:35:00Z" finished-at="2020-05-12T09:35:02Z">
+        </test-method> <!-- myAccounLoginValidate -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.UNF_031ValidateLogin@5419f379]" name="tearDown" is-config="true" duration-ms="1810" started-at="2020-05-17T23:14:34Z" finished-at="2020-05-17T23:14:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.UFM_001MyAccountRegistration -->
+      </class> <!-- com.training.sanity.tests.UNF_031ValidateLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
